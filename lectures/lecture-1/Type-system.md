@@ -45,3 +45,26 @@ someVar = false;
 ```TypeScript
 let withoutTypeVr; // тип any
 ```
+
+### Примитивные типы
+
+#### Number
+
+Все числа в TypeScript как и в JavaScript являются числами с плавающей точкой.
+Для указания данного типа переменной используется ключевое слово ```number```.
+
+``` TypeScript
+let x: number = 5;
+let y = 0; // автоматический вывод типа
+let z = 1.2345;
+let s = z.toFixed(2); // свойство интерфейса Number
+```
+
+Поддерживает разные системы счисления
+
+``` TypeScript
+let decimal: number = 5;
+let hex: number = 0xf00d;
+let binary: number = 0b1010;
+let octal: = 0o744;
+```
