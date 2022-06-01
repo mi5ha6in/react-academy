@@ -11,7 +11,7 @@ function PlaceCardList(): JSX.Element {
   const placeCardListElement =
     (
       <div className="cities__places-list places__list tabs__content">
-        {placeCardLists.map((card) => card)}
+        {placeCardList.map((card) => card)}
       </div>
     );
 
