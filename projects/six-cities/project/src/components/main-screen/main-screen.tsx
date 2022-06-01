@@ -1,6 +1,10 @@
 import PlaceCardList from '../place-card-list/place-card-list';
 
-function MainScreen(): JSX.Element {
+type MainScreenProps = {
+  countPlaceCard: number
+}
+
+function MainScreen({countPlaceCard}: MainScreenProps): JSX.Element {
   return (
     <body>
       <div style={{display: 'none'}}>
@@ -98,7 +102,8 @@ function MainScreen(): JSX.Element {
                   </ul>
                 </form>
 
-                <PlaceCardList />
+                <PlaceCardList countPlaceCard = {countPlaceCard}/>
+
               </section>
               <div className="cities__right-section">
                 <section className="cities__map map"></section>

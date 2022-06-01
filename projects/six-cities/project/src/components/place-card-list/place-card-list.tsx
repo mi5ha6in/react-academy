@@ -1,10 +1,13 @@
 import PlaceCard from '../place-card/place-card';
 
-function PlaceCardList(): JSX.Element {
-  const COUNT_PLACE_CARD = 5;
+type PlaceCardListProps = {
+  countPlaceCard: number
+}
+
+function PlaceCardList({countPlaceCard}: PlaceCardListProps): JSX.Element {
   const placeCardList = [];
 
-  for (let i = 0; i <= COUNT_PLACE_CARD; i++) {
+  for (let i = 0; i < countPlaceCard; i++) {
     placeCardList.push(<PlaceCard />);
   }
 
