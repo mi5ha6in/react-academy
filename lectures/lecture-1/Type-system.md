@@ -80,3 +80,14 @@ let octal: = 0o744;
 let logical: boolean = true;
 let checked: true;
 ```
+
+#### String
+
+Тип String соответствует аналогичному в JavaScript и представляет собой
+последовательность символов в кодировке Unicode UTF-16.
+
+```TypeScript
+let str: string = 'Hello';
+let str2 = "Hello";
+let str3 = `Hello ${str2}`
+```
