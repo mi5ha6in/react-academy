@@ -68,3 +68,15 @@ let hex: number = 0xf00d;
 let binary: number = 0b1010;
 let octal: = 0o744;
 ```
+
+#### Boolean
+
+Тип Boolean совпадает с одноименным типом в JavaScript и представляет собой
+логическое значение: истина (true) или ложь (false).
+
+Объявляется данный тип с помощью ключевого слова ```boolean```.
+
+```TypeScript
+let logical: boolean = true;
+let checked: true;
+```
