@@ -91,3 +91,25 @@ let str: string = 'Hello';
 let str2 = "Hello";
 let str3 = `Hello ${str2}`
 ```
+
+#### Void
+
+Тип Void противоположность типа Any. Этот тип означает отсутствие какого-либо
+типа. Обычно используется для указания того, что функция не возвращает
+никакого значения.
+
+```TypeScript
+function someFunction(): void {
+  alert('Hello');
+}
+```
+
+Тип Void подтипом типа Any, и супертипом для типов Null и Undefined.
+В тоже время он не зависит от других типов.
+Объявить переменную с данным типом возможно, но ей можно присвоить только
+```nul``` или ```undefined```.
+
+```TypeScript
+let v1: void = null;
+let v2: void = undefined;
+```
