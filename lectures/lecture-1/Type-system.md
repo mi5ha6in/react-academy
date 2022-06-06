@@ -151,3 +151,45 @@ undefined.
 let arr: number[] = [1, 2, 3];
 let list: Array<number> = [1, 2, 3];
 ```
+
+#### Тип Tuple
+
+Тип Tuple или кортеж представляет собой массив JavaScript, каждому из элементов
+которого можно указать свой тип.
+
+```TypeScript
+[T1, T2, ... Tn]
+
+{
+  0: T1,
+  1: T2,
+  ...
+  n: Tn
+}
+```
+
+```TypeScript
+let tuple: [string, number];
+tuple = ['some', 10]; // Правильно
+tuple = [10, 'some']; // Неверно
+
+console.log(tuple[0]); // 'some'
+console.log(tuple[1]); // 10
+```
+
+Кортежу можно присвоить значение, которое выходит за пределы определенных типов
+
+```TypeScript
+tuple[200] = 'some' // ok
+tuple[300] = 1; // ok
+tuple[400] = true; // ошибка
+```
+
+В этом случае тип должен быть ```string | number```.
+Можно создавать именованные кортежи путем объявления интерфейса, унаследованного
+от ```Array<T>``` и введя численно именованные свойства.
+
+```TypeScript
+interface KeyValuePair<K, V> extends Array<K | V> { 0: K; 1: V; } 
+let x: KeyValuePair<number, string> = [10, “ten”];
+```
