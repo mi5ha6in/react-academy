@@ -193,3 +193,25 @@ tuple[400] = true; // ошибка
 interface KeyValuePair<K, V> extends Array<K | V> { 0: K; 1: V; } 
 let x: KeyValuePair<number, string> = [10, “ten”];
 ```
+
+#### Enum
+
+Enum (перечисление) – способ указать более привычные имена набору числовых
+значений.
+
+```TypeScript
+enum Color {Red, Green, Blue};
+let c: Color = Color.Green
+```
+
+По умолчанию нумерация с нуля, но можно поменять
+
+```TypeScript
+enum Color {Red = 1, Green, Blue};
+let c: Color = Color.Green;
+```
+
+```TypeScript
+enum Color {Red = 1, Green = 2, Blue = 4}; 
+let c: Color = Color.Green;
+```
