@@ -249,3 +249,16 @@ function infiniteLoop(): never {
   }
 }
 ```
+
+#### Symbol
+
+Тип Symbol является примитивным и соответствует одноименному типу в JavaScript.
+Данный тип представляет уникальные идентификаторы, которые могут быть
+использованы как ключи для свойств объектов.
+
+```TypeScript
+let symbolKey = Symbol();
+let obj = {};
+
+obj[symbolKey] = 'secret message'
+```
