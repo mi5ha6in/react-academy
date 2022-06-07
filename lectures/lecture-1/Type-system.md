@@ -215,3 +215,37 @@ let c: Color = Color.Green;
 enum Color {Red = 1, Green = 2, Blue = 4}; 
 let c: Color = Color.Green;
 ```
+
+#### Never
+
+Тип ```never``` представляет тип, значение которого никогда не наступает.
+Например, never является типом, который возвращает функция, которая всегда
+бросает исключение или выход из которой ни когда не происходит.
+
+Переменные тоже могут иметь этот тип, например для того, чтобы ни когда не стать
+```true```.
+
+Тип ```never``` является подтипом любого типа. Переменная этого типа может быть
+присвоена переменной любого типа. С другой стороны, нет такого типа, который
+будет являться под типом у never.
+
+```TypeScript
+function error(message: string): never {
+  throw new Error(message);
+}
+```
+
+```TypeScript
+// Выведенным типом fail() будет never
+function fail() {
+  return error("Something failed");
+}
+```
+
+```TypeScript
+// нет выхода из этой функции
+function infiniteLoop(): never {
+  while (true) {
+  }
+}
+```
